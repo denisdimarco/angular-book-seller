@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './guest/login/login.component';
@@ -10,8 +11,11 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { UnauthorizedComponent } from './error/unauthorized/unauthorized.component';
-import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+
+
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -28,9 +32,12 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
