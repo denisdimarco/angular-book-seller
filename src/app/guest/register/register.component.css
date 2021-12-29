@@ -1,10 +1,6 @@
-.custom-card {
-  width: 350px;
-  max-width: 100%;
-  background-color: #eee;
+:host {
+  height: 100vh;
+  display: block;
+  background-color: #ffbba2;
 }
 
-.user-icon {
-  font-size: 100px;
-  color: #50A057;
-}
