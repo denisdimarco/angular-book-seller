@@ -28,4 +28,8 @@ export class AdminComponent implements OnInit {
   createBookRequest() {
     this.child?.showBookModal();
   }
+
+  saveBookWatcher(book: Book) {
+    this.bookList.push(book);
+  }
 }

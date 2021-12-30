@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {Book} from "../../models/book.model";
 import {BookService} from "../../services/book.service";
 
@@ -14,12 +14,13 @@ export class BookComponent {
   book: Book = new Book();
   errorMessage: string = "";
 
-
+  @Output() save = new EventEmitter
   constructor(private bookService: BookService) {
   }
 
   saveBook() {
     this.bookService.saveBook(this.book).subscribe(data => {
+      this.save.emit(data);
         $('#bookModal').modal('hide');
       }, err => {
         this.errorMessage = 'Unexpected error occurred.';
