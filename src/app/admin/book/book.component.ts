@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Book} from "../../models/book.model";
 import {BookService} from "../../services/book.service";
 
+declare var $: any;
+
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
@@ -25,5 +27,8 @@ export class BookComponent {
 
       }
     )
+  }
+  showBookModal() {
+    $('#bookModal').modal('show');
   }
 }
