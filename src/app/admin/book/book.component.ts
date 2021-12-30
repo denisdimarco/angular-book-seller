@@ -20,7 +20,7 @@ export class BookComponent {
 
   saveBook() {
     this.bookService.saveBook(this.book).subscribe(data => {
-
+        $('#bookModal').modal('hide');
       }, err => {
         this.errorMessage = 'Unexpected error occurred.';
         console.log(err);
