@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Book} from "../../models/book.model";
+import {BookService} from "../../services/book.service";
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+
+  bookList: Array<Book> = [];
+
+  constructor(private bookService: BookService) {
+  }
 
   ngOnInit(): void {
+
+    this.bookService.getAllBook().subscribe(data => {
+      this.bookList = data;
+    });
+
   }
 
 }
