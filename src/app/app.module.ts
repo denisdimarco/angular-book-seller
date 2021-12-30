@@ -15,6 +15,7 @@ import { UnauthorizedComponent } from './error/unauthorized/unauthorized.compone
 
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { BookComponent } from './admin/book/book.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {FormsModule} from "@angular/forms";
     ProfileComponent,
     AdminComponent,
     NotFoundComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
